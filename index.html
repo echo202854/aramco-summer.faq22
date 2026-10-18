@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دليل التدريب الصيفي | أرامكو</title>
+<meta name="description" content="دليل المتدربين لبرنامج التدريب الصيفي في أرامكو السعودية - الأسئلة الشائعة، استخراج الشهادة، المكافأة، ومواعيد البرنامج.">
+
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#f5f7fa,#10151c);
+  --surface: light-dark(#ffffff,#1a222c);
+  --text: light-dark(#17212b,#f1f5f9);
+  --muted: light-dark(#647484,#a8b6c5);
+  --line: light-dark(#e2e8ef,#303d4b);
+  --green: light-dark(#087f5b,#55d6a5);
+  --green-soft: light-dark(#e8f7f1,#15382e);
+  --control: light-dark(#f7fafc,#222d39);
+}
+
+/* Fallback for older browsers without light-dark() */
+@supports not (color: light-dark(#000, #fff)) {
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --text: #17212b;
+    --muted: #647484;
+    --line: #e2e8ef;
+    --green: #087f5b;
+    --green-soft: #e8f7f1;
+    --control: #f7fafc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151c;
+      --surface: #1a222c;
+      --text: #f1f5f9;
+      --muted: #a8b6c5;
+      --line: #303d4b;
+      --green: #55d6a5;
+      --green-soft: #15382e;
+      --control: #222d39;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Tahoma, Arial, "Noto Sans Arabic", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  border-radius: 0;
+}
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    light-dark(#073d35,#092b27),
+    light-dark(#087f5b,#126b50)
+  );
+  color: #fff;
+  padding: 54px 22px 76px;
+}
+
+@supports not (color: light-dark(#000, #fff)) {
+  .hero {
+    background: linear-gradient(135deg, #073d35, #087f5b);
+  }
+  @media (prefers-color-scheme: dark) {
+    .hero {
+      background: linear-gradient(135deg, #092b27, #126b50);
+    }
+  }
+}
+
+.wrap {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d8f5e8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #8dd8b7;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+h1 {
+  font-size: clamp(30px,5vw,46px);
+  margin: 24px 0 12px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.hero p {
+  color: #d7eee5;
+  max-width: 640px;
+  line-height: 1.9;
+  margin: 0;
+  font-size: 16px;
+}
+
+main {
+  margin-top: -36px;
+  padding-bottom: 48px;
+}
+
+.searchbox {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 36px #00000012;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.searchbox:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 12px 36px #0000001a, 0 0 0 3px rgba(8, 127, 91, 0.15);
+}
+
+.searchbox svg {
+  flex: none;
+  color: var(--muted);
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+}
+
+.searchhint {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.sectionhead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 30px 0 14px;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 0;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.faq:hover {
+  border-color: light-dark(#cbd5e1, #475569);
+}
+
+.question {
+  width: 100%;
+  padding: 18px 20px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  text-align: right;
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  user-select: none;
+}
+
+.question:hover {
+  background: var(--control);
+}
+
+.chevron {
+  color: var(--green);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform .2s ease;
+  display: inline-block;
+}
+
+.faq.open .chevron {
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+  padding: 0 20px 20px;
+  color: var(--muted);
+  line-height: 1.95;
+  font-size: 15px;
+  border-top: 1px solid transparent;
+}
+
+.faq.open .answer {
+  display: block;
+}
+
+.answer a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.answer a:hover {
+  text-decoration: underline;
+}
+
+.notice {
+  border: 1px solid light-dark(#c8e9dc,#285947);
+  background: var(--green-soft);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-top: 26px;
+  line-height: 1.8;
+  font-size: 14.5px;
+}
+
+@supports not (color: light-dark(#000, #fff)) {
+  .notice {
+    border: 1px solid #c8e9dc;
+    background: #e8f7f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    .notice {
+      border: 1px solid #285947;
+      background: #15382e;
+    }
+  }
+}
+
+.notice strong {
+  color: var(--green);
+}
+
+.bottom {
+  margin-top: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.bottom h2 {
+  margin-bottom: 7px;
+}
+
+.bottom p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.7;
+  font-size: 14.5px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 800;
+  white-space: nowrap;
+  font-size: 14.5px;
+  transition: opacity .2s, transform .1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn.telegram {
+  color: #fff;
+  background: #168ac5;
+}
+
+.btn.telegram:hover {
+  opacity: 0.92;
+}
+
+.btn.closed {
+  color: var(--muted);
+  background: var(--control);
+  border: 1px solid var(--line);
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 30px 12px 20px;
+}
+
+.empty {
+  display: none;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  padding: 32px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.countdowns {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+  margin: 22px 0 28px;
+}
+
+.timer {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.timer-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.timer h2 {
+  color: var(--green);
+  font-size: clamp(20px,4.5vw,32px);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.5px;
+  margin: 4px 0;
+  font-weight: 800;
+  direction: ltr;
+  display: inline-block;
+}
+
+.timer p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width:560px) {
+  .hero {
+    padding: 38px 18px 66px;
+  }
+
+  .wrap {
+    width: calc(100% - 24px);
+  }
+
+  .countdowns {
+    grid-template-columns: 1fr;
+  }
+
+  .searchhint {
+    display: none;
+  }
+
+  .bottom {
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="app">
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topline">
+      <div class="logo">أ</div>
+      <span>دليل المتدربين · أرامكو</span>
+    </div>
+
+    <h1>التدريب الصيفي<br>الأسئلة الشائعة</h1>
+
+    <p>
+      كل ما تحتاج معرفته عن الشهادة والمكافأة وحالة البرنامج،
+      في مكان واحد. اختر السؤال لعرض الإجابة، أو ابحث بكلمات من سؤالك.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="countdowns" aria-label="مواعيد العد التنازلي">
+
+  <article class="timer">
+    <div class="timer-label">الموعد المتوقع لنزول المكافأة</div>
+    <h2 id="timerDec">—</h2>
+    <p>20 ديسمبر 2026</p>
+  </article>
+
+  <article class="timer">
+    <div class="timer-label">الموعد المتوقع لفتح التسجيل</div>
+    <h2 id="timerFeb">—</h2>
+    <p>1 فبراير 2027</p>
+  </article>
+
+</section>
+
+<label class="searchbox" for="search">
+
+  <svg width="22" height="22"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2">
+    <circle cx="10.8" cy="10.8" r="6.8"></circle>
+    <path d="m16 16 5 5"></path>
+  </svg>
+
+  <input
+    id="search"
+    type="search"
+    placeholder="ابحث عن سؤالك هنا…"
+    autocomplete="off">
+
+  <span class="searchhint">بحث مباشر</span>
+
+</label>
+
+<div class="sectionhead">
+  <h2>الأسئلة والأجوبة</h2>
+  <span class="count" id="count">12 سؤال</span>
+</div>
+
+<div class="faq-list" id="faqList">
+
+  <article class="faq"
+    data-search="الشهادة استخراج الحصول اصدار رابط البريد الالكتروني">
+    <button class="question" aria-expanded="false">
+      <span>كيف أستخرج شهادة التدريب الصيفي؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      يمكنك التحقق من بريدك الإلكتروني، أو استخدام
+      <a href="https://script.google.com/macros/s/AKfycbyCiQj1UpYyPI7SNab9BCY2IcjeYOWlAS5iv_lS-Jf2zeFpwwnJ4yEjCg_tHRKvXAYsxA/exec"
+         target="_blank"
+         rel="noopener">رابط استخراج الشهادة</a>.
+      الرابط المذكور متداول من مجتمع المتدربين؛ تأكد من مطابقة بياناتك،
+      وإذا واجهت مشكلة راجع قنوات البرنامج الرسمية.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="المكافأة المالية متى تنزل موعد استلام">
+    <button class="question" aria-expanded="false">
+      <span>متى تنزل المكافأة المالية؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      بحسب المعلومات المتداولة بين المتدربين، قد تستغرق المكافأة
+      عدة أشهر بعد انتهاء البرنامج (يُذكر عادةً نحو 4–6 أشهر في الأعوام السابقة).
+      لم يُذكر هنا موعد رسمي مؤكد، وقد تُصرف في وقت منفصل عن الشهادة.
+      اعتمد على إعلان أرامكو الرسمي لأي موعد نهائي.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="استبعاد فصل من البرنامج الشهادة المكافأة لم يصل بريد">
+    <button class="question" aria-expanded="false">
+      <span>كيف أعرف إذا تم استبعادي من البرنامج؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      إذا لم تظهر الشهادة عبر البريد أو الرابط، فهذا لا يكفي وحده
+      لتأكيد الاستبعاد. تحقق من البريد غير المرغوب فيه، وراجع بياناتك
+      وقنوات التواصل الرسمية للبرنامج لتأكيد حالتك قبل اتخاذ أي قرار.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="ما شروط الحصول على الشهادة اجتياز إكمال المتطلبات الحضور">
+    <button class="question" aria-expanded="false">
+      <span>ما المطلوب حتى أحصل على الشهادة؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      تختلف المتطلبات حسب دورة البرنامج وتعليماته.
+      راجع إرشادات دفعتك، وتأكد من إكمال الأنشطة أو الحضور والتقييمات المطلوبة،
+      ثم تابع إشعارات البريد الإلكتروني.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="البريد الإلكتروني ما وصل رسائل spam junk لم تصل الرسالة">
+    <button class="question" aria-expanded="false">
+      <span>لم يصلني بريد بخصوص الشهادة، ماذا أفعل؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      افحص مجلد الرسائل غير المرغوب فيها (Spam/Junk)،
+      وابحث باسم البرنامج، وتأكد من البريد المسجل لديك.
+      إذا لم تجد الرسالة، تواصل مع الجهة الرسمية للبرنامج.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="الرابط لا يعمل مشكلة الشهادة الموقع تعطل خطأ السيرفر">
+    <button class="question" aria-expanded="false">
+      <span>رابط استخراج الشهادة لا يعمل عندي، ما الحل؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      تأكد من فتح الرابط عبر متصفح حديث، وجرب استخدام وضع التصفح المتخفي أو تغيير المتصفح/الجهاز.
+      إذا كان هناك ضغط كبير على الرابط (Google Apps Script)، فقد يواجه قيوداً مؤقتة؛ يُفضّل إعادة المحاولة في وقت لاحق
+      مع التأكد من إدخال السجل المدني والبريد بشكل صحيح.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="كم تبلغ قيمة المكافأة المالية المبلغ الراتب الفلوس كم ريال">
+    <button class="question" aria-expanded="false">
+      <span>كم تبلغ قيمة المكافأة المالية لمتدربي أرامكو؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      تُحدد المكافأة المالية وفقاً للوائح برنامج أرامكو لكل مرحلة (سواء للمرحلة الثانوية أو الجامعية)،
+      وتُصرف عادةً كمكافأة مقطوعة بعد استكمال كافة متطلبات البرنامج بنجاح.
+      يُرجى الرجوع لعقد التدريب أو الخطاب التعريفي بدفعتك للتفاصيل الدقيقة.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="القبول التوظيف cpc الابتعاث الأولوية هل يضمن الوظيفة">
+    <button class="question" aria-expanded="false">
+      <span>هل التدريب الصيفي يضمن لي القبول في برامج أرامكو المستقبلية؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      التدريب الصيفي يمنحك خبرة عملية قيّمة ويعزز سيرتك الذاتية وفهمك لبيئة العمل في أرامكو،
+      لكنه لا يضمن القبول المباشر في برامج الابتعاث (CPC) أو برامج التدرج والتوظيف؛
+      إذ يخضع كل برنامج لشروط ومسابقات قبول مستقلة واختبارات خاصة به.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="خطأ في البيانات السجل المدني الهوية لم يتم العثور الاسم">
+    <button class="question" aria-expanded="false">
+      <span>أدخلت بياناتي في رابط الشهادة وظهرت رسالة خطأ، ماذا أفعل؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      تأكد من إدخال رقم الهوية الوطنية والبريد الإلكتروني بدقة دون مسافات إضافية.
+      إذا كنت قد اجتزت البرنامج بنجاح ولكن بياناتك لم تظهر، فقد يكون السبب تأخر رفع كشوفات بعض المجموعات في النظام؛
+      يُرجى الانتظار والمحاولة لاحقاً، أو التواصل مع منسق دورتك.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="تعديل الاسم تصحيح خطأ إملائي إعادة إصدار الشهادة">
+    <button class="question" aria-expanded="false">
+      <span>هل يمكن تعديل الاسم إذا وُجد خطأ إملائي في الشهادة؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      الشهادات تصدر تلقائياً بالاسم المسجل في نظام القبول. إذا كان هناك خطأ جوهري في الاسم باللغة العربية أو الإنجليزية،
+      يجب التواصل فوراً مع فريق إدارة البرنامج عبر البريد الرسمي المعتمد لتعديل السجل وإعادة إصدارها.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="اعتماد الشهادة الساعات التطوعية لينكد إن linkedin جهات معتمدة">
+    <button class="question" aria-expanded="false">
+      <span>هل شهادة التدريب معتمدة ويمكن إضافتها في LinkedIn أو الساعات التطوعية؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      نعم، الشهادة صادرة عن شركة أرامكو السعودية وتعتبر إضافة ممتازة لملفك المهني وسيرتك الذاتية.
+      أما بخصوص احتسابها كساعات تطوعية أو تدريب تعاوني، فيعتمد ذلك على سياسة واعتماد مدرستك أو جامعتك.
+    </div>
+  </article>
+
+  <article class="faq"
+    data-search="التواصل الدعم الفني خدمة العملاء إيميل هاتف مسؤول البرنامج">
+    <button class="question" aria-expanded="false">
+      <span>كيف يمكنني التواصل مع إدارة البرنامج أو الدعم الرسمي؟</span>
+      <span class="chevron">⌄</span>
+    </button>
+    <div class="answer">
+      يمكنك التواصل عبر البريد الإلكتروني الذي استلمت منه رسائل القبول والتعليمات،
+      أو زيارة بوابة التوظيف والتدريب على الموقع الرسمي لشركة
+      <a href="https://www.aramco.com" target="_blank" rel="noopener">أرامكو السعودية</a>
+      للحصول على قنوات الدعم المعتمدة.
+    </div>
+  </article>
+
+</div>
+
+<div class="empty" id="emptyState">
+  <p style="margin:0 0 8px; font-weight:700; color:var(--text);">لم يتم العثور على أي سؤال يطابق بحثك</p>
+  <span style="font-size:13px;">جرب البحث بكلمات أخرى مثل "مكافأة"، "شهادة"، أو "رابط".</span>
+</div>
+
+<div class="notice">
+  <strong>تنبيه هام:</strong> هذا الدليل والروابط المدرجة به مبادرة تطوعية تنظيمية من مجتمع المتدربين لمساعدة الطلاب وتسهيل الوصول للإجابات المتكررة، ولا يُعد موقعاً رسمياً لشركة أرامكو السعودية. يُرجى دوماً الرجوع للقنوات الرسمية لأي قرارات نهائية.
+</div>
+
+<section class="bottom">
+  <div>
+    <h2>مجتمع المتدربين على تيليجرام</h2>
+    <p>انضم إلى مجموعة المتدربين لتبادل الاستفسارات والخبرات ومتابعة التحديثات أولاً بأول.</p>
+  </div>
+  <a href="https://t.me" target="_blank" rel="noopener" class="btn telegram">
+    مجموعة التيليجرام
+  </a>
+</section>
+
+<section class="bottom">
+  <div>
+    <h2>بوابة التسجيل الرسمية</h2>
+    <p>تفتح بوابات التقديم لبرامج التدريب وفق الجداول السنوية المعلنة على الموقع الرسمي.</p>
+  </div>
+  <a href="https://www.aramco.com" target="_blank" rel="noopener" class="btn closed">
+    التسجيل مغلق حالياً
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <p>دليل المتدربين · مبادرة مجتمعية غير رسمية © 2026</p>
+</footer>
+
+</div>
+
+<script>
+// --- Countdown Timers ---
+const targetBonus = new Date("2026-12-20T00:00:00+03:00").getTime();
+const targetRegistration = new Date("2027-02-01T00:00:00+03:00").getTime();
+
+function updateTimers() {
+  const now = new Date().getTime();
+
+  function calcTime(target) {
+    const diff = target - now;
+    if (diff <= 0) return "انتهى الموعد";
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    const pad = (n) => String(n).padStart(2, '0');
+    return `${days} يوم ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+  }
+
+  const elBonus = document.getElementById("timerDec");
+  const elReg = document.getElementById("timerFeb");
+
+  if (elBonus) elBonus.textContent = calcTime(targetBonus);
+  if (elReg) elReg.textContent = calcTime(targetRegistration);
+}
+
+updateTimers();
+setInterval(updateTimers, 1000);
+
+
+// --- Accordion Logic ---
+document.querySelectorAll(".faq .question").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const faq = btn.closest(".faq");
+    const isOpen = faq.classList.contains("open");
+
+    // Optional: close other accordions if single-open behavior is preferred,
+    // or keep independent. Independent feels best for reference guides.
+    faq.classList.toggle("open");
+    btn.setAttribute("aria-expanded", !isOpen);
+  });
+});
+
+
+// --- Arabic-Aware Search Filter ---
+function normalizeArabic(text) {
+  if (!text) return "";
+  return text
+    .toLowerCase()
+    .replace(/[\u064B-\u065F\u0670]/g, "") // Diacritics
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ة/g, "ه")
+    .replace(/ى/g, "ي")
+    .replace(/ؤ/g, "و")
+    .replace(/ئ/g, "ي")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+const searchInput = document.getElementById("search");
+const faqItems = Array.from(document.querySelectorAll(".faq"));
+const countEl = document.getElementById("count");
+const emptyState = document.getElementById("emptyState");
+
+function formatQuestionCount(n) {
+  if (n === 0) return "لا توجد أسئلة";
+  if (n === 1) return "سؤال واحد";
+  if (n === 2) return "سؤالان";
+  if (n >= 3 && n <= 10) return `${n} أسئلة`;
+  return `${n} سؤال`;
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    const query = normalizeArabic(e.target.value);
+    let visibleCount = 0;
+
+    faqItems.forEach((faq) => {
+      const searchTerms = faq.getAttribute("data-search") || "";
+      const text = faq.innerText || faq.textContent;
+      const combined = normalizeArabic(searchTerms + " " + text);
+
+      if (!query || combined.includes(query)) {
+        faq.style.display = "";
+        visibleCount++;
+      } else {
+        faq.style.display = "none";
+      }
+    });
+
+    if (countEl) {
+      countEl.textContent = formatQuestionCount(visibleCount);
+    }
+
+    if (emptyState) {
+      emptyState.style.display = visibleCount === 0 ? "block" : "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
